@@ -18,7 +18,10 @@ public class SOmeClass {
         Path filePath = FileSystems.getDefault().getPath("someFile.txt"); // Relative Path
         filePath = Paths.get("C:\\Users\\Gavril\\Desktop\\date.txt");     // Absolute Path
 
-        readTextFileWithNIO(filePath);
+        //Get absolute path of working directory
+        filePath = Paths.get(".");
+        Path currentPath = filePath.toAbsolutePath();
+        System.out.println(currentPath);
     }
 
     private static void readTextFileWithNIO(Path path) {
