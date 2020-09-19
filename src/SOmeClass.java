@@ -22,6 +22,9 @@ public class SOmeClass {
         filePath = Paths.get(".");
         Path currentPath = filePath.toAbsolutePath();
         System.out.println(currentPath);
+
+        filePath = Paths.get(".","someDir","date.txt"); // compose Path
+        readTextFileWithNIO(filePath);
     }
 
     private static void readTextFileWithNIO(Path path) {
