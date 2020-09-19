@@ -2,6 +2,7 @@ import java.io.*;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,7 +15,9 @@ public class SOmeClass {
         list.put(3, new Location(3, "Swimming in the river"));
         list.put(4, new Location(4, "Climbing the mountain"));
 
-        Path filePath = FileSystems.getDefault().getPath("someFile.txt");
+        Path filePath = FileSystems.getDefault().getPath("someFile.txt"); // Relative Path
+        filePath = Paths.get("C:\\Users\\Gavril\\Desktop\\date.txt");     // Absolute Path
+
         readTextFileWithNIO(filePath);
     }
 
