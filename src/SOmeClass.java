@@ -29,7 +29,6 @@ public class SOmeClass {
         }
     }
 
-
     private static void writeTxtWithNIO(Path path) {
         try (BufferedWriter bufferedWriter = Files.newBufferedWriter(path)) {
             for (Location location : list.values()) {
@@ -39,7 +38,6 @@ public class SOmeClass {
             e.printStackTrace();
         }
     }
-
 
     private static void readObjectsWithNIO() {
         Path filePath = FileSystems.getDefault().getPath("someFile.dat");
@@ -122,5 +120,4 @@ public class SOmeClass {
             e.printStackTrace();
         }
     }
-
 }
