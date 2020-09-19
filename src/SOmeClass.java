@@ -25,6 +25,13 @@ public class SOmeClass {
 
         filePath = Paths.get(".", "someDir", "date.txt"); // compose Path
         readTextFileWithNIO(filePath);
+
+        // compose Path
+        // .  one dot current current directory
+        // .. two  dots parent directory
+        filePath = FileSystems.getDefault().getPath(".","someDir", "..", "someDir", "date.txt");
+        Path composedPath = filePath.normalize().toAbsolutePath();
+        System.out.println(composedPath);
     }
 
     private static void readTextFileWithNIO(Path path) {
